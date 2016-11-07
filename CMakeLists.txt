@@ -182,6 +182,9 @@ endif(WITH_RDMA)
 
 find_package(Backtrace)
 
+find_package(urcu REQUIRED)
+set(HAVE_URCU ${URCU_FOUND})
+
 if(LINUX)
   find_package(udev REQUIRED)
   set(HAVE_UDEV ${UDEV_FOUND})
